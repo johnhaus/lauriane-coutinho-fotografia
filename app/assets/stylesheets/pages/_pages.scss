@@ -1,3 +1,25 @@
 body {
   margin: 0;
 }
+
+.main-layout {
+  margin: 0px;
+}
+
+.main-pic {
+  background: image-url("background1.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.content {
+  padding: 50px 100px;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}

@@ -1,8 +1,41 @@
 .footer {
   background: lightgrey;
   padding: 120px 50px;
+  display: flex;
+  justify-content: center;
+  display: -webkit-flex; /* Safari */
+  -webkit-justify-content: center; /* Safari 6.1+ */
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+.column {
+  -ms-flex: 16%; /* IE10 */
+  flex: 16%;
+  max-width: 16%;
   & img {
-    width: 200px;
-    height: 200px;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .column {
+    -ms-flex: 33%;
+    flex: 33%;
+    max-width: 33%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
   }
 }

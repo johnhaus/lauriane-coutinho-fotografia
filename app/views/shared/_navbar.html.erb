@@ -2,10 +2,39 @@
   <div class="left">
     <%= link_to "Home", root_path %>
   </div>
-  <div class="right">
+  <div class="right-fullscreen">
     <ul>
       <li><%= link_to "Services", services_path %></li>
       <li><%= link_to "About", about_path %></li>
     </ul>
   </div>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+      <li><%= link_to "Services", services_path %></li>
+      <li><%= link_to "About", about_path %></li>
+    </div>
+  </div>
 </div>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>

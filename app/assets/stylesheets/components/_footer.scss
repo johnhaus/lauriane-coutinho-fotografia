@@ -1,10 +1,14 @@
 .footer {
   background: lightgrey;
-  padding: 0px 50px 120px 50px;
+  padding: 0px 50px 70px 50px;
+}
+
+.footer-pics {
   display: flex;
   justify-content: center;
   display: -webkit-flex; /* Safari */
   -webkit-justify-content: center; /* Safari 6.1+ */
+
 }
 
 .row {
@@ -21,6 +25,17 @@
   & img {
     vertical-align: middle;
     width: 100%;
+  }
+}
+
+.column-links a {
+  color: #fff;
+  opacity: 0.85;
+  text-decoration: none;
+  font-size: 50px;
+  padding: 30px 20px 10px 20px;
+  &:hover {
+    font-weight: bolder;
   }
 }
 
